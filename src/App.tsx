@@ -23,14 +23,16 @@ const cardsInfo = [
 
 function App() {
   return (
-    <main className="flex flex-col md:flex-row h-screen items-center justify-center">
-      {cardsInfo.map((card) => (
+    <main className="flex flex-col md:flex-row md:h-screen md:p-4 items-center justify-center">
+      {cardsInfo.map((card, i) => (
         <Card
           key={card.title}
           imgSrc={card.imgSrc}
           title={card.title}
           text={card.text}
           color={card.color}
+          isFirstChild={i === 0}
+          isLastChild={i === cardsInfo.length - 1}
         />
       ))}
     </main>
