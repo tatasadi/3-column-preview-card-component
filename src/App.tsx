@@ -23,7 +23,7 @@ const cardsInfo = [
 
 function App() {
   return (
-    <main>
+    <main className="flex flex-col md:flex-row h-screen items-center justify-center">
       {cardsInfo.map((card) => (
         <Card
           key={card.title}
